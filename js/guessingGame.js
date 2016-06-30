@@ -1,6 +1,14 @@
 /* **** Global Variables **** */
 // try to elminate these global variables in your project, these are here just to start.
 
+// Code looks great! Here is a quick tip, to remove global variables you can wrap your whole javascript file
+// in an IIFE (Immediately Invoked Function Expression).  This will create a new scope for your code, scoped to the 
+// the function your code is wrapped in.  Since it is scoped to the function your code is wrapped in, your variables such
+// as playersGuess, winningNumber, generateWinningNumber, etc won't be leaked to the global scope.
+// Here is a great blog post: http://benalman.com/news/2010/11/immediately-invoked-function-expression/
+
+
+(function(){
 var playersGuess = [];
 var winningNumber = 0;
 var totalGuesses = 5;    
@@ -145,3 +153,4 @@ $(document).ready(function() {
 		
 
 });
+})()
